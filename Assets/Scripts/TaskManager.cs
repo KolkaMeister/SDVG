@@ -15,10 +15,19 @@ public class TaskManager
     
     public TaskData[] GetTasks() { return _tasks.ToArray(); }
 
-    public void EditTask(int id)
+    public void EditTask(int id,TaskItemData d)
     {
-       var task = _tasks.Find(t => t.Id == id);
-        
+       var task = _tasks.Find(t => t._id == id);
+       task._name = d.name;
+        task._text = d.description;
+       TasksChanged?.Invoke();
+    }
+
+    public void Add(TaskItemData d)
+    {
+        Debug.Log("created");
+        _tasks.Add(new TaskData(0,d.name,d.description));
+        TasksChanged?.Invoke();
     }
 
 }
