@@ -1,20 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class TaskItemWidget : ItemWidget<TaskItemData>
+public class TaskItemWidget : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _title;
-
-    public override void Set(TaskItemData data)
+    // Start is called before the first frame update
+    void Start()
     {
-        base.Set(data);
-        _title.text = _data.name;
+        
     }
 
-    public void OpenTaskEditWindow()
+    // Update is called once per frame
+    void Update()
     {
-
+        
     }
 }

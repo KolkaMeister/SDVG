@@ -4,10 +4,10 @@ using UnityEngine;
 
 public abstract class ItemWidget<T> : MonoBehaviour
 {
-    protected T _data;
+    private T _data;
 
 
-    public virtual void Set(T data)
+    public void Set(T data)
     {
         _data = data;
     }
