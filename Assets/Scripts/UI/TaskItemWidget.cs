@@ -6,7 +6,7 @@ using UnityEngine;
 public class TaskItemWidget : ItemWidget<TaskItemData>
 {
     [SerializeField] private TMP_Text _title;
-
+    [SerializeField] private TaskDescriptionWindow _descriptionWindow;
     public override void Set(TaskItemData data)
     {
         base.Set(data);
@@ -15,6 +15,7 @@ public class TaskItemWidget : ItemWidget<TaskItemData>
 
     public void OpenTaskEditWindow()
     {
-
+        var i =Instantiate<TaskDescriptionWindow>(_descriptionWindow, transform.parent.parent.parent);
+        i.SetData(_data);
     }
 }
