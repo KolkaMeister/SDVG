@@ -11,6 +11,7 @@ public class TaskDescriptionWindow : ModalWindow
     [SerializeField] private Button _cancelBut;
     [SerializeField] private Button _confirmBut;
     [SerializeField] private Button _closeBut;
+    [SerializeField] private Button _deleteBut;
     [SerializeField] private TMP_InputField _inputName;
     [SerializeField] private TMP_InputField _inputDecription;
     private TaskItemData _data;
@@ -34,12 +35,18 @@ public class TaskDescriptionWindow : ModalWindow
         _inputDecription.interactable = true;
         _editBut.gameObject.SetActive(false);
         _closeBut.gameObject.SetActive(false);
+        _deleteBut.gameObject.SetActive(false);
         _confirmBut.gameObject.SetActive(true);
         _cancelBut.gameObject.SetActive(true);
     }
     public void ConfirmEdit()
     {
         PlayerData.TaskM.EditTask(_data.id,new TaskItemData(_data.id,_inputName.text,_inputDecription.text));
+        Close();
+    }
+    public void Delete()
+    {
+        PlayerData.TaskM.DeleteTask(_data.id);
         Close();
     }
     public void CancelEdit()
@@ -50,6 +57,7 @@ public class TaskDescriptionWindow : ModalWindow
         _inputDecription.interactable = false;
         _editBut.gameObject.SetActive(true);
         _closeBut.gameObject.SetActive(true);
+        _deleteBut.gameObject.SetActive(true);
         _confirmBut.gameObject.SetActive(false);
         _cancelBut.gameObject.SetActive(false);
     }

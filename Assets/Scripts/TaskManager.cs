@@ -23,6 +23,12 @@ public class TaskManager
        TasksChanged?.Invoke();
     }
 
+    public void DeleteTask(int id)
+    {
+       var task = _tasks.Find(t => t._id == id);
+        _tasks.Remove(task);
+        TasksChanged?.Invoke();
+    }
     public void Add(TaskItemData d)
     {
         Debug.Log("created");
