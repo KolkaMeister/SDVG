@@ -20,6 +20,7 @@ public class BingoWindow : MonoBehaviour
         var l = new List<TaskItemData>();
         foreach (var task in v) { l.Add(new TaskItemData(task._id, task._name, task._text)); }
         _dataGroup.SetData(l.ToArray());
+        
     }
     public void OpenAddBingoWindow()
     {
