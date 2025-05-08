@@ -10,8 +10,35 @@ public class ToggleSlider : MonoBehaviour
 
     private void Start()
     {
-        _toggle.onValueChanged.AddListener(UpdateSprite);
-        UpdateSprite(_toggle.isOn); // Устанавливаем начальный спрайт
+        // Установка значения из сохранённых настроек
+        if (SettingsManager.Instance != null)
+        {
+            _toggle.isOn = SettingsManager.Instance.CurrentOptions.taskStartEnabled;
+        }
+
+        _toggle.onValueChanged.AddListener(OnToggleChanged);
+        UpdateSprite(_toggle.isOn);
+    }
+
+    private void OnToggleChanged(bool isOn)
+    {
+        UpdateSprite(isOn);
+
+        // Обновляем настройку
+        if (SettingsManager.Instance != null)
+        {
+            SettingsManager.Instance.CurrentOptions.taskStartEnabled = isOn;
+            SettingsManager.Instance.SaveSettings();
+        }
+
+        // Запускаем/останавливаем задачу
+        if (UserManager.Instance != null)
+        {
+            if (isOn)
+                UserManager.Instance.StartTask();
+            else
+                UserManager.Instance.EndTask();
+        }
     }
 
     private void UpdateSprite(bool isOn)

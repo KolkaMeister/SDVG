@@ -154,6 +154,14 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.mobile.notifications": {
+      "version": "file:C:/Users/Евгений/Downloads/com.unity.mobile.notifications-master/com.unity.mobile.notifications",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.modules.androidjni": "1.0.0"
+      }
+    },
     "com.unity.test-framework": {
       "version": "1.1.31",
       "depth": 0,
@@ -204,6 +212,12 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "jillejr.newtonsoft.json-for-unity": {
+      "version": "file:C:/Users/Евгений/Downloads/Newtonsoft.Json-for-Unity-13.0.102/Newtonsoft.Json-for-Unity-13.0.102",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
