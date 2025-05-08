@@ -1,11 +1,13 @@
+using System;
+using System.Collections.Generic;
 using Unity.Notifications.Android;
 using UnityEngine;
 
 public class NotificationSender : MonoBehaviour
 {
+
     private void Start()
     {
-        // Регистрируем канал, если его нет
         var channel = new AndroidNotificationChannel()
         {
             Id = "default",
@@ -16,12 +18,14 @@ public class NotificationSender : MonoBehaviour
         AndroidNotificationCenter.RegisterNotificationChannel(channel);
     }
 
-    public void ScheduleNotification(string title, string message, System.DateTime notifyTime)
+    public void ScheduleNotification(string title, string message, DateTime notifyTime)
     {
-        var notification = new AndroidNotification();
-        notification.Title = title;
-        notification.Text = message;
-        notification.FireTime = notifyTime;
+        var notification = new AndroidNotification
+        {
+            Title = title,
+            Text = message,
+            FireTime = notifyTime
+        };
 
         AndroidNotificationCenter.SendNotification(notification, "default");
     }

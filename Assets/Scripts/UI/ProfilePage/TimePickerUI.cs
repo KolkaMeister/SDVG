@@ -74,6 +74,7 @@ public class TimePickerUI : MonoBehaviour
         int hour = hourDropdown.value;
         int minute = minuteDropdown.value * 5;
         SettingsManager.Instance.CurrentOptions.reminderTime = new TimeSpan(hour, minute, 0);
+        Debug.Log(SettingsManager.Instance.CurrentOptions.reminderTime.Hours.ToString() + ":" + SettingsManager.Instance.CurrentOptions.reminderTime.Minutes.ToString());
         SettingsManager.Instance.SaveSettings();
     }
 }

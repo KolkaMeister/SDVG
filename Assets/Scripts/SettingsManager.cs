@@ -51,10 +51,7 @@ public class SettingsManager : MonoBehaviour
     {
         CurrentOptions = new UserOptions()
         {
-            userName = "Пользователь",
-            reminderTime = TimeSpan.FromHours(1),
-            taskEndTime = TimeSpan.FromHours(1),
-            taskStartEnabled = false,
+            reminderTime = TimeSpan.FromHours(9),
             rewardPoints = 50,
             bonusPoints = 10
         };
@@ -67,7 +64,7 @@ public class SettingsManager : MonoBehaviour
     {
         try
         {
-            string json = JsonConvert.SerializeObject(CurrentOptions, Formatting.Indented);
+            string json = JsonConvert.SerializeObject(CurrentOptions);
             File.WriteAllText(savePath, json);
             Debug.Log($"Настройки сохранены в: {savePath}");
         }

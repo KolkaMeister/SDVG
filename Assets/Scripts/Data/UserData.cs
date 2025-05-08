@@ -3,10 +3,7 @@ using System;
 [System.Serializable]
 public class UserData
 {
+    public string UserName;
     public int points;
 
-    public DateTime? currentTaskStartTime;
-    public DateTime? currentTaskEndTime;
-
-    public bool IsTaskActive => currentTaskEndTime.HasValue && DateTime.Now < currentTaskEndTime.Value;
 }
