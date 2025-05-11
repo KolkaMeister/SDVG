@@ -38,7 +38,7 @@ public class PetInfo : MonoBehaviour
     internal string path;
     private Pet petData;
 
-    void Start()
+    void Awake()
     {
         path = Application.dataPath + "/Data/pet.json";
 
@@ -53,6 +53,7 @@ public class PetInfo : MonoBehaviour
             eat = petData.eat;
             drink = petData.drink;
             wash = petData.wash;
+            Debug.Log(play+"23");
         }
         else
         {
@@ -62,6 +63,7 @@ public class PetInfo : MonoBehaviour
 
     void OnApplicationQuit()
     {
+        Debug.Log("Данные сохраненны");
         SaveData();
     }
 

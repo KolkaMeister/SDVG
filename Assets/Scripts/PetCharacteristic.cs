@@ -31,11 +31,11 @@ public class PetCharacteristic : MonoBehaviour
     void Start()
     {
         petInfo = GetComponent<PetInfo>();
+        Debug.Log(petInfo.play);
         characteristic = GetCharacteristic();
         characteristicText.text = characteristic.ToString();
         characteristicButton.onClick.AddListener(ButtonCharacteristic);
         timeStart = Time.time;
-
     }
 
     // Update is called once per frame
