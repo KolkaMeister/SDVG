@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BingoWindow : MonoBehaviour
@@ -7,19 +9,22 @@ public class BingoWindow : MonoBehaviour
     [SerializeField] private Transform _container;
     [SerializeField] private TaskItemWidget _widgetPrefab;
     [SerializeField] private AddTaskWindow _addTaskWindowPrefab;
-    private DataGroup<TaskItemWidget,TaskItemData> _dataGroup ;
+    private DataGroup<TaskItemWidget, TaskData> _dataGroup ;
 
+    public static string chosenDate;
     private void Start()
     {
-        _dataGroup = new DataGroup<TaskItemWidget, TaskItemData>(_container, _widgetPrefab);
-        PlayerData.TaskM.TasksChanged += UpdateBingo;
+        _dataGroup = new DataGroup<TaskItemWidget, TaskData>(_container, _widgetPrefab);
+        chosenDate = DateTime.Now.ToString("dd.MM.yyyy");
+        TaskManager.TasksChanged += UpdateBingo;
+        UpdateBingo();
     }
     private void UpdateBingo()
     {
-        var v = PlayerData.TaskM.GetTasks();
-        var l = new List<TaskItemData>();
-        foreach (var task in v) { l.Add(new TaskItemData(task._id, task._name, task._text)); }
-        _dataGroup.SetData(l.ToArray());
+        var v = TaskManager.GetTasks();
+        var sorted = v.Where(task => task._date.Equals(chosenDate));
+       // foreach (var task in v) { l.Add(new TaskItemData(task._id, task._name, task._text)); }
+        _dataGroup.SetData(sorted.ToArray());
         
     }
     public void OpenAddBingoWindow()

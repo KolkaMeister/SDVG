@@ -5,9 +5,9 @@ using UnityEngine;
 
 public static class PlayerData 
 {
-    public static TaskManager TaskM;
-    static PlayerData()
-    {
-        TaskM = new TaskManager(new TaskData[0]);
-    }
+    //public static TaskManager TaskM;
+    ////static PlayerData()
+    //{
+    //    TaskM = new TaskManager(new TaskData[0]);
+    //}
 }

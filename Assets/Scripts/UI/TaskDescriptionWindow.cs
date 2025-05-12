@@ -14,16 +14,20 @@ public class TaskDescriptionWindow : ModalWindow
     [SerializeField] private Button _deleteBut;
     [SerializeField] private TMP_InputField _inputName;
     [SerializeField] private TMP_InputField _inputDecription;
+    [SerializeField] private TMP_Text _name;
+    [SerializeField] private TMP_Text _description;
+    [SerializeField] private TMP_Text _timeToComplete;
     private TaskItemData _data;
 
 
     public void SetData(TaskItemData data)
     {
         _data = data;
-        _inputName.text= _data.name;
-        _inputDecription.text = _data.description;
-        _inputName.interactable = false;
-        _inputDecription.interactable = false;
+
+        //_inputName.text= _data.name;
+        //_inputDecription.text = _data.description;
+        //_inputName.interactable = false;
+        //_inputDecription.interactable = false;
     }
     public void UpdateDecsView()
     {
@@ -41,12 +45,12 @@ public class TaskDescriptionWindow : ModalWindow
     }
     public void ConfirmEdit()
     {
-        PlayerData.TaskM.EditTask(_data.id,new TaskItemData(_data.id,_inputName.text,_inputDecription.text));
+       // TaskManager.EditTask(_data.id,new TaskItemData(_data.id,_inputName.text,_inputDecription.text));
         Close();
     }
     public void Delete()
     {
-        PlayerData.TaskM.DeleteTask(_data.id);
+       // TaskManager.DeleteTask(_data.id);
         Close();
     }
     public void CancelEdit()
