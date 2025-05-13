@@ -1052,6 +1052,9 @@ MonoBehaviour:
   _deleteBut: {fileID: 4796823690751614710}
   _inputName: {fileID: 0}
   _inputDecription: {fileID: 0}
+  _name: {fileID: 6013913214940567706}
+  _description: {fileID: 5674871463998921319}
+  _timeToComplete: {fileID: 1783500151920442069}
 --- !u!1 &4298137778566231076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,7 +1166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.03100586, y: -403.9696}
+  m_AnchoredPosition: {x: 0.00024414062, y: -403.9696}
   m_SizeDelta: {x: -173.938, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2570267497132816882

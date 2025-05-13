@@ -17,13 +17,15 @@ public class TaskDescriptionWindow : ModalWindow
     [SerializeField] private TMP_Text _name;
     [SerializeField] private TMP_Text _description;
     [SerializeField] private TMP_Text _timeToComplete;
-    private TaskItemData _data;
+    private TaskData _data;
 
 
-    public void SetData(TaskItemData data)
+    public void SetData(TaskData data)
     {
         _data = data;
-
+        _name.text = data._name;
+        _description.text = data._text;
+        _timeToComplete.text = data._startTime.ToString() + ":00 - " + data._endTime.ToString() + ":00";
         //_inputName.text= _data.name;
         //_inputDecription.text = _data.description;
         //_inputName.interactable = false;
@@ -55,8 +57,8 @@ public class TaskDescriptionWindow : ModalWindow
     }
     public void CancelEdit()
     {
-        _inputName.text = _data.name;
-        _inputDecription.text = _data.description;
+        _inputName.text = _data._name;
+        _inputDecription.text = _data._text;
         _inputName.interactable = false;
         _inputDecription.interactable = false;
         _editBut.gameObject.SetActive(true);

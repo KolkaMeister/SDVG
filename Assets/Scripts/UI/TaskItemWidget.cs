@@ -17,7 +17,7 @@ public class TaskItemWidget : ItemWidget<TaskData>
 
     public void OpenTaskEditWindow()
     {
-        var i =Instantiate<TaskDescriptionWindow>(_descriptionWindow, transform.parent.parent.parent);
-       // i.SetData(_data);
+        var i =Instantiate<TaskDescriptionWindow>(_descriptionWindow, transform.parent.parent.parent.parent.parent);
+        i.SetData(_data);
     }
 }
