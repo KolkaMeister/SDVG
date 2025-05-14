@@ -31,11 +31,11 @@ public class PetCharacteristic : MonoBehaviour
     void Start()
     {
         petInfo = GetComponent<PetInfo>();
+        Debug.Log(petInfo.play);
         characteristic = GetCharacteristic();
         characteristicText.text = characteristic.ToString();
         characteristicButton.onClick.AddListener(ButtonCharacteristic);
         timeStart = Time.time;
-
     }
 
     // Update is called once per frame
@@ -47,12 +47,12 @@ public class PetCharacteristic : MonoBehaviour
             if (characteristic != 0)
             {
                 characteristic -= characteristicDown;
-                if (characteristic < 0){ characteristic = 0; }
+                if (characteristic < 0) { characteristic = 0; }
                 UpdateCharacteristic();
                 characteristicText.text = characteristic.ToString();
             }
         }
-        
+
     }
 
     public float GetCharacteristic()
@@ -77,10 +77,10 @@ public class PetCharacteristic : MonoBehaviour
         switch (Name)
         {
             case "play":
-                petInfo.play=characteristic;
+                petInfo.play = characteristic;
                 break;
             case "eat":
-                petInfo.eat= characteristic;
+                petInfo.eat = characteristic;
                 break;
             case "wash":
                 petInfo.wash = characteristic;

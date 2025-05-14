@@ -2,8 +2,8 @@
     "name": "pet",
     "level": 1,
     "progress": 0,
-    "play": 95.0,
-    "eat": 100.0,
-    "drink": 100.0,
+    "play": 65.0,
+    "eat": 65.0,
+    "drink": 70.0,
     "wash": 100.0
 }
