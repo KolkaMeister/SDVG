@@ -10308,7 +10308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8980392, g: 0.99215686, b: 0.8352941, a: 0}
+  m_Color: {r: 0.46886167, g: 0.518, b: 0.43610278, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10649,7 +10649,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11374,10 +11374,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1368235488}
     m_Modifications:
-    - target: {fileID: 2121353142877165094, guid: c30ee30788c0e494c88dd0b5ab248cfa, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2121353143138120390, guid: c30ee30788c0e494c88dd0b5ab248cfa, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -11596,34 +11592,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1368235488}
     m_Modifications:
-    - target: {fileID: 343273820875697241, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 435112438764003102, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198371499693059282, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1236443803336862902, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2734923071695493533, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2858184697522073060, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3649278934824392444, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4298137777400360969, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -11712,49 +11680,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: TaskDescWindow
       objectReference: {fileID: 0}
-    - target: {fileID: 4298137778566231083, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4942115512676393787, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4942115512676393787, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.00024414062
-      objectReference: {fileID: 0}
-    - target: {fileID: 5121324523580266656, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5256268487206860836, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5860576241602653805, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 6340392772050300835, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7075550989105337917, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7212038992590004411, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 7212038992590004411, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.032104492
-      objectReference: {fileID: 0}
-    - target: {fileID: 8442284338970127526, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
+    - target: {fileID: 4298137777400360970, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3efcd66e2e38654f9cc162beff0c345, type: 3}
