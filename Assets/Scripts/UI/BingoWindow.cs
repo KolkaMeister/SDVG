@@ -12,14 +12,14 @@ public class BingoWindow : MonoBehaviour
     private DataGroup<TaskItemWidget, TaskData> _dataGroup ;
 
     public static string chosenDate;
-    private void Start()
+    private void Awake()
     {
         _dataGroup = new DataGroup<TaskItemWidget, TaskData>(_container, _widgetPrefab);
         chosenDate = DateTime.Now.ToString("dd.MM.yyyy");
         TaskManager.TasksChanged += UpdateBingo;
         UpdateBingo();
     }
-    private void UpdateBingo()
+    public void UpdateBingo()
     {
         var v = TaskManager.GetTasks();
         var sorted = v.Where(task => task._date.Equals(chosenDate));
